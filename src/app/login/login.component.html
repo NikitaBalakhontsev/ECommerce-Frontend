@@ -1,0 +1,46 @@
+<div class="container mt-5">
+  <div class="card" style="padding: 20px; max-width: 500px;margin: 0 auto; ">
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Имя пользователя</mat-label>
+        <input
+          matInput
+          placeholder="Введите ваш логин"
+          ngModel
+          name="userName"
+          id="userName"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Пароль</mat-label>
+        <input
+          type="password"
+          matInput
+          placeholder="Введите ваш пароль"
+          ngModel
+          name="userPassword"
+          id="userPassword"
+        />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" class="w-100">
+        Войти
+      </button>
+    </form>
+    <div class="card text-center mt-3 p-3">
+      Впервые в магазине? Зарегистрируйтесь сейчас!
+
+      <button
+        class="mt-2"
+        type="button"
+        mat-raised-button
+        color="primary"
+        style="width: 30%; left: 50%; transform: translateX(-50%)"
+        (click)="registerUser()"
+      >
+        Регистрация
+      </button>
+    </div>
+  </div>
+</div>
